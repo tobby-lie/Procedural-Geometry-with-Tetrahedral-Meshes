@@ -523,11 +523,15 @@ void displayCB()
     // line color
     float lineColor[] = {0.2f, 0.2f, 0.2f, 1};
 
+    
+    glRotatef(cameraAngleX, 1, 0, 0);
+        glRotatef(cameraAngleY, 0, 1, 0);
+        glRotatef(-90, 1, 0, 0);
     /* First triangle */
     glPushMatrix();
-    glRotatef(cameraAngleX, 1, 0, 0);
-    glRotatef(cameraAngleY, 0, 1, 0);
-    glRotatef(-90, 1, 0, 0);
+//    glRotatef(cameraAngleX, 1, 0, 0);
+//    glRotatef(cameraAngleY, 0, 1, 0);
+//    glRotatef(-90, 1, 0, 0);
     
     glTranslated(0, 1, 0);
 //    glColor3f(1, 0, 0);
@@ -538,9 +542,9 @@ void displayCB()
     glPopMatrix();
     
     glPushMatrix();
-    glRotatef(cameraAngleX, 1, 0, 0);
-    glRotatef(cameraAngleY, 0, 1, 0);
-    glRotatef(-90, 1, 0, 0);
+//    glRotatef(cameraAngleX, 1, 0, 0);
+//    glRotatef(cameraAngleY, 0, 1, 0);
+//    glRotatef(-90, 1, 0, 0);
     
     /* first cylinder segment */
     glRotated(-63.71, 1, 0, 0);
@@ -554,9 +558,9 @@ void displayCB()
     
     /* second cylinder segment */
     glPushMatrix();
-    glRotatef(cameraAngleX, 1, 0, 0);
-    glRotatef(cameraAngleY, 0, 1, 0);
-    glRotatef(-90, 1, 0, 0);
+//    glRotatef(cameraAngleX, 1, 0, 0);
+//    glRotatef(cameraAngleY, 0, 1, 0);
+//    glRotatef(-90, 1, 0, 0);
     
     
 //    glRotated(-31.85, 0, 0, 1);
@@ -578,9 +582,9 @@ void displayCB()
     
     /* third cylinder segment */
     glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         
     //    glRotated(-31.85, 0, 0, 1);
@@ -602,9 +606,9 @@ void displayCB()
     
     /* fourth cylinder segment */
     glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         
     //    glRotated(-31.85, 0, 0, 1);
@@ -626,9 +630,9 @@ void displayCB()
     
     /* fifth cylinder segment */
     glPushMatrix();
-    glRotatef(cameraAngleX, 1, 0, 0);
-    glRotatef(cameraAngleY, 0, 1, 0);
-    glRotatef(-90, 1, 0, 0);
+//    glRotatef(cameraAngleX, 1, 0, 0);
+//    glRotatef(cameraAngleY, 0, 1, 0);
+//    glRotatef(-90, 1, 0, 0);
             
     glTranslated(0.50, 0, 0);
     glTranslated(0, -0.01, 0);
@@ -643,9 +647,9 @@ void displayCB()
     
     /* sixth cylinder segment */
     glPushMatrix();
-    glRotatef(cameraAngleX, 1, 0, 0);
-    glRotatef(cameraAngleY, 0, 1, 0);
-    glRotatef(-90, 1, 0, 0);
+//    glRotatef(cameraAngleX, 1, 0, 0);
+//    glRotatef(cameraAngleY, 0, 1, 0);
+//    glRotatef(-90, 1, 0, 0);
             
     glTranslated(-0.50, 0, 0);
     glTranslated(0, -0.01, 0);
@@ -659,9 +663,9 @@ void displayCB()
     /* sixth cylinder segment */
     
     glPushMatrix();
-    glRotatef(cameraAngleX, 1, 0, 0);
-    glRotatef(cameraAngleY, 0, 1, 0);
-    glRotatef(-90, 1, 0, 0);
+//    glRotatef(cameraAngleX, 1, 0, 0);
+//    glRotatef(cameraAngleY, 0, 1, 0);
+//    glRotatef(-90, 1, 0, 0);
     
     glTranslated(-1, -1, 0);
 //    glColor3f(1, 0, 0);
@@ -672,9 +676,9 @@ void displayCB()
     glPopMatrix();
     
     glPushMatrix();
-    glRotatef(cameraAngleX, 1, 0, 0);
-    glRotatef(cameraAngleY, 0, 1, 0);
-    glRotatef(-90, 1, 0, 0);
+//    glRotatef(cameraAngleX, 1, 0, 0);
+//    glRotatef(cameraAngleY, 0, 1, 0);
+//    glRotatef(-90, 1, 0, 0);
     
     glTranslated(1, -1, 0);
 //    glColor3f(1, 0, 0);
@@ -687,9 +691,9 @@ void displayCB()
     
     /* Second triangle */
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         glTranslated(-1, -1, 0);
     //    glColor3f(1, 0, 0);
@@ -700,9 +704,9 @@ void displayCB()
         glPopMatrix();
         
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         glTranslated(0, 1, 0);
     //    glColor3f(1, 0, 0);
@@ -713,9 +717,9 @@ void displayCB()
         glPopMatrix();
         
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         glTranslated(0, -1, -1);
     //    glColor3f(1, 0, 0);
@@ -728,9 +732,9 @@ void displayCB()
     
     /* Third triangle */
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         glTranslated(-1, -1, 0);
     //    glColor3f(1, 0, 0);
@@ -741,9 +745,9 @@ void displayCB()
         glPopMatrix();
         
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         glTranslated(1, -1, 0);
     //    glColor3f(1, 0, 0);
@@ -754,9 +758,9 @@ void displayCB()
         glPopMatrix();
         
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         glTranslated(0, -1, -1);
     //    glColor3f(1, 0, 0);
@@ -769,9 +773,9 @@ void displayCB()
     
     /* Fourth triangle */
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         glTranslated(-1, -1, 0);
     //    glColor3f(1, 0, 0);
@@ -782,9 +786,9 @@ void displayCB()
         glPopMatrix();
         
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         glTranslated(0, 1, 0);
     //    glColor3f(1, 0, 0);
@@ -795,9 +799,9 @@ void displayCB()
         glPopMatrix();
         
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         glTranslated(0, -1, -1);
     //    glColor3f(1, 0, 0);
@@ -815,9 +819,9 @@ void displayCB()
     
     /* First triangle */
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         glTranslated(0, 1, 0);
     //    glColor3f(1, 0, 0);
@@ -828,9 +832,9 @@ void displayCB()
         glPopMatrix();
         
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         /* first cylinder segment */
         glRotated(-63.71, 1, 0, 0);
@@ -844,9 +848,9 @@ void displayCB()
         
         /* second cylinder segment */
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         
     //    glRotated(-31.85, 0, 0, 1);
@@ -868,9 +872,9 @@ void displayCB()
         
         /* third cylinder segment */
         glPushMatrix();
-            glRotatef(cameraAngleX, 1, 0, 0);
-            glRotatef(cameraAngleY, 0, 1, 0);
-            glRotatef(-90, 1, 0, 0);
+//            glRotatef(cameraAngleX, 1, 0, 0);
+//            glRotatef(cameraAngleY, 0, 1, 0);
+//            glRotatef(-90, 1, 0, 0);
             
             
         //    glRotated(-31.85, 0, 0, 1);
@@ -892,9 +896,9 @@ void displayCB()
         
         /* fourth cylinder segment */
         glPushMatrix();
-            glRotatef(cameraAngleX, 1, 0, 0);
-            glRotatef(cameraAngleY, 0, 1, 0);
-            glRotatef(-90, 1, 0, 0);
+//            glRotatef(cameraAngleX, 1, 0, 0);
+//            glRotatef(cameraAngleY, 0, 1, 0);
+//            glRotatef(-90, 1, 0, 0);
             
             
         //    glRotated(-31.85, 0, 0, 1);
@@ -916,9 +920,9 @@ void displayCB()
         
         /* fifth cylinder segment */
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
                 
         glTranslated(0.50, 0, 0);
         glTranslated(0, -0.01, 0);
@@ -933,9 +937,9 @@ void displayCB()
         
         /* sixth cylinder segment */
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
                 
         glTranslated(-0.50, 0, 0);
         glTranslated(0, -0.01, 0);
@@ -949,9 +953,9 @@ void displayCB()
         /* sixth cylinder segment */
         
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         glTranslated(-1, -1, 0);
     //    glColor3f(1, 0, 0);
@@ -962,9 +966,9 @@ void displayCB()
         glPopMatrix();
         
         glPushMatrix();
-        glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
+//        glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
         
         glTranslated(1, -1, 0);
     //    glColor3f(1, 0, 0);
@@ -977,9 +981,9 @@ void displayCB()
         
         /* Second triangle */
             glPushMatrix();
-            glRotatef(cameraAngleX, 1, 0, 0);
-            glRotatef(cameraAngleY, 0, 1, 0);
-            glRotatef(-90, 1, 0, 0);
+//            glRotatef(cameraAngleX, 1, 0, 0);
+//            glRotatef(cameraAngleY, 0, 1, 0);
+//            glRotatef(-90, 1, 0, 0);
             
             glTranslated(-1, -1, 0);
         //    glColor3f(1, 0, 0);
@@ -990,9 +994,9 @@ void displayCB()
             glPopMatrix();
             
             glPushMatrix();
-            glRotatef(cameraAngleX, 1, 0, 0);
-            glRotatef(cameraAngleY, 0, 1, 0);
-            glRotatef(-90, 1, 0, 0);
+//            glRotatef(cameraAngleX, 1, 0, 0);
+//            glRotatef(cameraAngleY, 0, 1, 0);
+//            glRotatef(-90, 1, 0, 0);
             
             glTranslated(0, 1, 0);
         //    glColor3f(1, 0, 0);
@@ -1003,9 +1007,9 @@ void displayCB()
             glPopMatrix();
             
             glPushMatrix();
-            glRotatef(cameraAngleX, 1, 0, 0);
-            glRotatef(cameraAngleY, 0, 1, 0);
-            glRotatef(-90, 1, 0, 0);
+//            glRotatef(cameraAngleX, 1, 0, 0);
+//            glRotatef(cameraAngleY, 0, 1, 0);
+//            glRotatef(-90, 1, 0, 0);
             
             glTranslated(0, -1, -1);
         //    glColor3f(1, 0, 0);
@@ -1018,9 +1022,9 @@ void displayCB()
         
         /* Third triangle */
             glPushMatrix();
-            glRotatef(cameraAngleX, 1, 0, 0);
-            glRotatef(cameraAngleY, 0, 1, 0);
-            glRotatef(-90, 1, 0, 0);
+//            glRotatef(cameraAngleX, 1, 0, 0);
+//            glRotatef(cameraAngleY, 0, 1, 0);
+//            glRotatef(-90, 1, 0, 0);
             
             glTranslated(-1, -1, 0);
         //    glColor3f(1, 0, 0);
@@ -1031,9 +1035,9 @@ void displayCB()
             glPopMatrix();
             
             glPushMatrix();
-            glRotatef(cameraAngleX, 1, 0, 0);
-            glRotatef(cameraAngleY, 0, 1, 0);
-            glRotatef(-90, 1, 0, 0);
+//            glRotatef(cameraAngleX, 1, 0, 0);
+//            glRotatef(cameraAngleY, 0, 1, 0);
+//            glRotatef(-90, 1, 0, 0);
             
             glTranslated(1, -1, 0);
         //    glColor3f(1, 0, 0);
@@ -1044,9 +1048,9 @@ void displayCB()
             glPopMatrix();
             
             glPushMatrix();
-            glRotatef(cameraAngleX, 1, 0, 0);
-            glRotatef(cameraAngleY, 0, 1, 0);
-            glRotatef(-90, 1, 0, 0);
+//            glRotatef(cameraAngleX, 1, 0, 0);
+//            glRotatef(cameraAngleY, 0, 1, 0);
+//            glRotatef(-90, 1, 0, 0);
             
             glTranslated(0, -1, -1);
         //    glColor3f(1, 0, 0);
@@ -1059,9 +1063,9 @@ void displayCB()
         
         /* Fourth triangle */
             glPushMatrix();
-            glRotatef(cameraAngleX, 1, 0, 0);
-            glRotatef(cameraAngleY, 0, 1, 0);
-            glRotatef(-90, 1, 0, 0);
+//            glRotatef(cameraAngleX, 1, 0, 0);
+//            glRotatef(cameraAngleY, 0, 1, 0);
+//            glRotatef(-90, 1, 0, 0);
             
             glTranslated(-1, -1, 0);
         //    glColor3f(1, 0, 0);
@@ -1072,9 +1076,9 @@ void displayCB()
             glPopMatrix();
             
             glPushMatrix();
-            glRotatef(cameraAngleX, 1, 0, 0);
-            glRotatef(cameraAngleY, 0, 1, 0);
-            glRotatef(-90, 1, 0, 0);
+//            glRotatef(cameraAngleX, 1, 0, 0);
+//            glRotatef(cameraAngleY, 0, 1, 0);
+//            glRotatef(-90, 1, 0, 0);
             
             glTranslated(0, 1, 0);
         //    glColor3f(1, 0, 0);
@@ -1085,9 +1089,9 @@ void displayCB()
             glPopMatrix();
             
             glPushMatrix();
-            glRotatef(cameraAngleX, 1, 0, 0);
-            glRotatef(cameraAngleY, 0, 1, 0);
-            glRotatef(-90, 1, 0, 0);
+//            glRotatef(cameraAngleX, 1, 0, 0);
+//            glRotatef(cameraAngleY, 0, 1, 0);
+//            glRotatef(-90, 1, 0, 0);
             
             glTranslated(0, -1, -1);
         //    glColor3f(1, 0, 0);
