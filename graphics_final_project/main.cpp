@@ -67,6 +67,7 @@ Cylinder cylinder1(0.069f, 0.069f, 1.4f, 70, 8, false); // baseRadius, topRadius
 Cylinder cylinder2(0.069f, 0.069f, 2.2f, 70, 8, false);        // baseRadius, topRadius, height, sectors, stacks, smooth(default)
 Cylinder cylinder3(0.069f, 0.069f, 2.0f, 70, 8, false);        // baseRadius, topRadius, height, sectors, stacks, smooth(default)
 Cylinder cylinder4(0.069f, 0.069f, 2.2f, 70, 8, false);        // baseRadius, topRadius, height, sectors, stacks, smooth(default)
+Cylinder cylinder5(0.069f, 0.069f, 1.0f, 70, 8, false);        // baseRadius, topRadius, height, sectors, stacks, smooth(default)
 int subdivision = 5;
 Icosphere sphere(0.050601, subdivision, false);    // radius, subdivision, smooth
 Icosphere sphere2(0.069f, subdivision, false);    // radius, subdivision, smooth
@@ -508,7 +509,7 @@ void displayCB()
 //    glRotatef(cameraAngleY, 0, 1, 0);   // heading
 
     // transform model
-    glRotatef(90, 1, 0, 0);
+//    glRotatef(90, 1, 0, 0);
 
     // set material
     float ambient[]  = {0.5f, 0.5f, 0.5f, 1};
@@ -522,585 +523,682 @@ void displayCB()
 
     // line color
     float lineColor[] = {0.2f, 0.2f, 0.2f, 1};
-
+    
     
     glRotatef(cameraAngleX, 1, 0, 0);
-        glRotatef(cameraAngleY, 0, 1, 0);
-        glRotatef(-90, 1, 0, 0);
-    /* First triangle */
-    glPushMatrix();
-//    glRotatef(cameraAngleX, 1, 0, 0);
-//    glRotatef(cameraAngleY, 0, 1, 0);
-//    glRotatef(-90, 1, 0, 0);
+    glRotatef(cameraAngleY, 0, 1, 0);
     
-    glTranslated(0, 1, 0);
-//    glColor3f(1, 0, 0);
-//    glBindTexture(GL_TEXTURE_2D, 0);
+    glPushMatrix();
     glColor3f(1, 0, 0);
     sphere2.draw();
     glColor3f(1, 1, 1);
     glPopMatrix();
     
     glPushMatrix();
+    glTranslated(0, 0.85, 0.015);
+    glColor3f(1, 0, 0);
+    sphere2.draw();
+    glColor3f(1, 1, 1);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslated(0, 0, 0.283);
+    glRotated(90, 0, 1, 0);
+    cylinder5.draw();
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslated(0.5, 0, 0.283);
+    glColor3f(1, 0, 0);
+    sphere2.draw();
+    glColor3f(1, 1, 1);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslated(-0.5, 0, 0.283);
+    glColor3f(1, 0, 0);
+    sphere2.draw();
+    glColor3f(1, 1, 1);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslated(0, 0, -0.583);
+    glColor3f(1, 0, 0);
+    sphere2.draw();
+    glColor3f(1, 1, 1);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslated(0.2499, 0, -0.15);
+    glRotated(30, 0, 1, 0);
+    cylinder5.draw();
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslated(-0.2499, 0, -0.15);
+    glRotated(-30, 0, 1, 0);
+    cylinder5.draw();
+    glPopMatrix();
+    
+    
+    
+    glPushMatrix();
+    glTranslated(0.26, 0.41, 0.15);
+    glRotated(90, 1, 0, 0);
+    glRotated(30, 0, 1, 0);
+    glRotated(-15, 1, 0, 0);
+    cylinder5.draw();
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslated(-0.26, 0.41, 0.15);
+    glRotated(90, 1, 0, 0);
+    glRotated(-30, 0, 1, 0);
+    glRotated(-15, 1, 0, 0);
+    cylinder5.draw();
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslated(0, 0.41, -0.29);
+    glRotated(90, 1, 0, 0);
+    glRotated(35, 1, 0, 0);
+    cylinder5.draw();
+    glPopMatrix();
+    
+    
 //    glRotatef(cameraAngleX, 1, 0, 0);
 //    glRotatef(cameraAngleY, 0, 1, 0);
 //    glRotatef(-90, 1, 0, 0);
-    
-    /* first cylinder segment */
-    glRotated(-63.71, 1, 0, 0);
-//    glRotated(90, 1, 0, 0);
-    glTranslated(0, 0.449, -0.22);
-//    glColor3f(1, 0, 0);
-//    glBindTexture(GL_TEXTURE_2D, 0);
-    cylinder2.draw();
-    glPopMatrix();
-    /* first cylinder segment */
-    
-    /* second cylinder segment */
-    glPushMatrix();
-//    glRotatef(cameraAngleX, 1, 0, 0);
-//    glRotatef(cameraAngleY, 0, 1, 0);
+//
+//    glPushMatrix();
+////    glRotatef(cameraAngleX, 1, 0, 0);
+//
 //    glRotatef(-90, 1, 0, 0);
-    
-    
-//    glRotated(-31.85, 0, 0, 1);
-//    glRotated(63.71, 1, 0, 0);
-//    glRotated(31.85, 0, 1, 0);
-    //    glRotated(90, 1, 0, 0);
-    glTranslated(0, -1.0, 0);
-    glTranslated(0, 0, 0.11);
-    glRotated(45, 0, 1, 0);
-    glTranslated(0.78, 0, 0);
-    glTranslated(0, 0, -0.08);
-//    glRotated(90, 1, 0, 0);
-//    glTranslated(0.449, -0.35, 0);
+//
+//    glTranslated(0, 2, 0);
+//    cylinder5.draw();
+//
+//    glPopMatrix();
+
+    // FIRST TETRA
+//    glRotatef(cameraAngleX, 1, 0, 0);
+//        glRotatef(cameraAngleY, 0, 1, 0);
+//        glRotatef(-90, 1, 0, 0);
+//    /* First triangle */
+//    glPushMatrix();
+////    glRotatef(cameraAngleX, 1, 0, 0);
+////    glRotatef(cameraAngleY, 0, 1, 0);
+////    glRotatef(-90, 1, 0, 0);
+//
+//    glTranslated(0, 1, 0);
+////    glColor3f(1, 0, 0);
+////    glBindTexture(GL_TEXTURE_2D, 0);
 //    glColor3f(1, 0, 0);
-//    glBindTexture(GL_TEXTURE_2D, 0);
-    cylinder1.draw();
-    glPopMatrix();
-    /* second cylinder segment */
-    
-    /* third cylinder segment */
-    glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        
-    //    glRotated(-31.85, 0, 0, 1);
-    //    glRotated(63.71, 1, 0, 0);
-    //    glRotated(31.85, 0, 1, 0);
-        //    glRotated(90, 1, 0, 0);
-        glTranslated(0, -1.0, 0);
-        glTranslated(0, 0, -0.11);
-        glRotated(-45, 0, 1, 0);
-        glTranslated(-0.635, 0, 0);
-        glTranslated(0, 0, 0.08);
-    //    glRotated(90, 1, 0, 0);
-    //    glTranslated(0.449, -0.35, 0);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        cylinder1.draw();
-        glPopMatrix();
-    /* third cylinder segment */
-    
-    /* fourth cylinder segment */
-    glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        
-    //    glRotated(-31.85, 0, 0, 1);
-    //    glRotated(63.71, 1, 0, 0);
-    //    glRotated(31.85, 0, 1, 0);
-        //    glRotated(90, 1, 0, 0);
-        glTranslated(0, -1.0, 0);
+//    sphere2.draw();
+//    glColor3f(1, 1, 1);
+//    glPopMatrix();
+//
+//    glPushMatrix();
+////    glRotatef(cameraAngleX, 1, 0, 0);
+////    glRotatef(cameraAngleY, 0, 1, 0);
+////    glRotatef(-90, 1, 0, 0);
+//
+//    /* first cylinder segment */
+//    glRotated(-63.71, 1, 0, 0);
+////    glRotated(90, 1, 0, 0);
+//    glTranslated(0, 0.449, -0.22);
+////    glColor3f(1, 0, 0);
+////    glBindTexture(GL_TEXTURE_2D, 0);
+//    cylinder2.draw();
+//    glPopMatrix();
+//    /* first cylinder segment */
+//
+//    /* second cylinder segment */
+//    glPushMatrix();
+////    glRotatef(cameraAngleX, 1, 0, 0);
+////    glRotatef(cameraAngleY, 0, 1, 0);
+////    glRotatef(-90, 1, 0, 0);
+//
+//
+////    glRotated(-31.85, 0, 0, 1);
+////    glRotated(63.71, 1, 0, 0);
+////    glRotated(31.85, 0, 1, 0);
+//    //    glRotated(90, 1, 0, 0);
+//    glTranslated(0, -1.0, 0);
+//    glTranslated(0, 0, 0.11);
+//    glRotated(45, 0, 1, 0);
+//    glTranslated(0.78, 0, 0);
+//    glTranslated(0, 0, -0.08);
+////    glRotated(90, 1, 0, 0);
+////    glTranslated(0.449, -0.35, 0);
+////    glColor3f(1, 0, 0);
+////    glBindTexture(GL_TEXTURE_2D, 0);
+//    cylinder1.draw();
+//    glPopMatrix();
+//    /* second cylinder segment */
+//
+//    /* third cylinder segment */
+//    glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//
+//    //    glRotated(-31.85, 0, 0, 1);
+//    //    glRotated(63.71, 1, 0, 0);
+//    //    glRotated(31.85, 0, 1, 0);
+//        //    glRotated(90, 1, 0, 0);
+//        glTranslated(0, -1.0, 0);
 //        glTranslated(0, 0, -0.11);
-        glRotated(90, 0, 1, 0);
+//        glRotated(-45, 0, 1, 0);
 //        glTranslated(-0.635, 0, 0);
 //        glTranslated(0, 0, 0.08);
-    //    glRotated(90, 1, 0, 0);
-    //    glTranslated(0.449, -0.35, 0);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        cylinder3.draw();
-        glPopMatrix();
-    /* fourth cylinder segment */
-    
-    /* fifth cylinder segment */
-    glPushMatrix();
-//    glRotatef(cameraAngleX, 1, 0, 0);
-//    glRotatef(cameraAngleY, 0, 1, 0);
-//    glRotatef(-90, 1, 0, 0);
-            
-    glTranslated(0.50, 0, 0);
-    glTranslated(0, -0.01, 0);
-            
-    glRotated(27, 0, 0, 1);
-    glRotated(90, 1, 0, 0);
+//    //    glRotated(90, 1, 0, 0);
+//    //    glTranslated(0.449, -0.35, 0);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        cylinder1.draw();
+//        glPopMatrix();
+//    /* third cylinder segment */
+//
+//    /* fourth cylinder segment */
+//    glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//
+//    //    glRotated(-31.85, 0, 0, 1);
+//    //    glRotated(63.71, 1, 0, 0);
+//    //    glRotated(31.85, 0, 1, 0);
+//        //    glRotated(90, 1, 0, 0);
+//        glTranslated(0, -1.0, 0);
+////        glTranslated(0, 0, -0.11);
+//        glRotated(90, 0, 1, 0);
+////        glTranslated(-0.635, 0, 0);
+////        glTranslated(0, 0, 0.08);
+//    //    glRotated(90, 1, 0, 0);
+//    //    glTranslated(0.449, -0.35, 0);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        cylinder3.draw();
+//        glPopMatrix();
+//    /* fourth cylinder segment */
+//
+//    /* fifth cylinder segment */
+//    glPushMatrix();
+////    glRotatef(cameraAngleX, 1, 0, 0);
+////    glRotatef(cameraAngleY, 0, 1, 0);
+////    glRotatef(-90, 1, 0, 0);
+//
+//    glTranslated(0.50, 0, 0);
+//    glTranslated(0, -0.01, 0);
+//
+//    glRotated(27, 0, 0, 1);
+//    glRotated(90, 1, 0, 0);
+////    glColor3f(1, 0, 0);
+////    glBindTexture(GL_TEXTURE_2D, 0);
+//    cylinder2.draw();
+//    glPopMatrix();
+//    /* fifth cylinder segment */
+//
+//    /* sixth cylinder segment */
+//    glPushMatrix();
+////    glRotatef(cameraAngleX, 1, 0, 0);
+////    glRotatef(cameraAngleY, 0, 1, 0);
+////    glRotatef(-90, 1, 0, 0);
+//
+//    glTranslated(-0.50, 0, 0);
+//    glTranslated(0, -0.01, 0);
+//
+//    glRotated(-27, 0, 0, 1);
+//    glRotated(-90, 1, 0, 0);
+////    glColor3f(1, 0, 0);
+////    glBindTexture(GL_TEXTURE_2D, 0);
+//    cylinder2.draw();
+//    glPopMatrix();
+//    /* sixth cylinder segment */
+//
+//    glPushMatrix();
+////    glRotatef(cameraAngleX, 1, 0, 0);
+////    glRotatef(cameraAngleY, 0, 1, 0);
+////    glRotatef(-90, 1, 0, 0);
+//
+//    glTranslated(-1, -1, 0);
+////    glColor3f(1, 0, 0);
+////    glBindTexture(GL_TEXTURE_2D, 0);
 //    glColor3f(1, 0, 0);
-//    glBindTexture(GL_TEXTURE_2D, 0);
-    cylinder2.draw();
-    glPopMatrix();
-    /* fifth cylinder segment */
-    
-    /* sixth cylinder segment */
-    glPushMatrix();
-//    glRotatef(cameraAngleX, 1, 0, 0);
-//    glRotatef(cameraAngleY, 0, 1, 0);
-//    glRotatef(-90, 1, 0, 0);
-            
-    glTranslated(-0.50, 0, 0);
-    glTranslated(0, -0.01, 0);
-            
-    glRotated(-27, 0, 0, 1);
-    glRotated(-90, 1, 0, 0);
+//    sphere2.draw();
+//    glColor3f(1, 1, 1);
+//    glPopMatrix();
+//
+//    glPushMatrix();
+////    glRotatef(cameraAngleX, 1, 0, 0);
+////    glRotatef(cameraAngleY, 0, 1, 0);
+////    glRotatef(-90, 1, 0, 0);
+//
+//    glTranslated(1, -1, 0);
+////    glColor3f(1, 0, 0);
+////    glBindTexture(GL_TEXTURE_2D, 0);
 //    glColor3f(1, 0, 0);
-//    glBindTexture(GL_TEXTURE_2D, 0);
-    cylinder2.draw();
-    glPopMatrix();
-    /* sixth cylinder segment */
-    
-    glPushMatrix();
-//    glRotatef(cameraAngleX, 1, 0, 0);
-//    glRotatef(cameraAngleY, 0, 1, 0);
-//    glRotatef(-90, 1, 0, 0);
-    
-    glTranslated(-1, -1, 0);
-//    glColor3f(1, 0, 0);
-//    glBindTexture(GL_TEXTURE_2D, 0);
-    glColor3f(1, 0, 0);
-    sphere2.draw();
-    glColor3f(1, 1, 1);
-    glPopMatrix();
-    
-    glPushMatrix();
-//    glRotatef(cameraAngleX, 1, 0, 0);
-//    glRotatef(cameraAngleY, 0, 1, 0);
-//    glRotatef(-90, 1, 0, 0);
-    
-    glTranslated(1, -1, 0);
-//    glColor3f(1, 0, 0);
-//    glBindTexture(GL_TEXTURE_2D, 0);
-    glColor3f(1, 0, 0);
-    sphere2.draw();
-    glColor3f(1, 1, 1);
-    glPopMatrix();
-    /* first triangle */
-    
-    /* Second triangle */
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        glTranslated(-1, -1, 0);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        glColor3f(1, 0, 0);
-        sphere2.draw();
-        glColor3f(1, 1, 1);
-        glPopMatrix();
-        
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        glTranslated(0, 1, 0);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        glColor3f(1, 0, 0);
-        sphere2.draw();
-        glColor3f(1, 1, 1);
-        glPopMatrix();
-        
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        glTranslated(0, -1, -1);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        glColor3f(1, 0, 0);
-        sphere2.draw();
-        glColor3f(1, 1, 1);
-        glPopMatrix();
-        /* second triangle */
-    
-    /* Third triangle */
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        glTranslated(-1, -1, 0);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        glColor3f(1, 0, 0);
-        sphere2.draw();
-        glColor3f(1, 1, 1);
-        glPopMatrix();
-        
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        glTranslated(1, -1, 0);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        glColor3f(1, 0, 0);
-        sphere2.draw();
-        glColor3f(1, 1, 1);
-        glPopMatrix();
-        
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        glTranslated(0, -1, -1);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        glColor3f(1, 0, 0);
-        sphere2.draw();
-        glColor3f(1, 1, 1);
-        glPopMatrix();
-        /* Third triangle */
-    
-    /* Fourth triangle */
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        glTranslated(-1, -1, 0);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        glColor3f(1, 0, 0);
-        sphere2.draw();
-        glColor3f(1, 1, 1);
-        glPopMatrix();
-        
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        glTranslated(0, 1, 0);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        glColor3f(1, 0, 0);
-        sphere2.draw();
-        glColor3f(1, 1, 1);
-        glPopMatrix();
-        
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        glTranslated(0, -1, -1);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        glColor3f(1, 0, 0);
-        sphere2.draw();
-        glColor3f(1, 1, 1);
-        glPopMatrix();
-        /* fourth triangle */
+//    sphere2.draw();
+//    glColor3f(1, 1, 1);
+//    glPopMatrix();
+//    /* first triangle */
+//
+//    /* Second triangle */
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        glTranslated(-1, -1, 0);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        glColor3f(1, 0, 0);
+//        sphere2.draw();
+//        glColor3f(1, 1, 1);
+//        glPopMatrix();
+//
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        glTranslated(0, 1, 0);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        glColor3f(1, 0, 0);
+//        sphere2.draw();
+//        glColor3f(1, 1, 1);
+//        glPopMatrix();
+//
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        glTranslated(0, -1, -1);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        glColor3f(1, 0, 0);
+//        sphere2.draw();
+//        glColor3f(1, 1, 1);
+//        glPopMatrix();
+//        /* second triangle */
+//
+//    /* Third triangle */
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        glTranslated(-1, -1, 0);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        glColor3f(1, 0, 0);
+//        sphere2.draw();
+//        glColor3f(1, 1, 1);
+//        glPopMatrix();
+//
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        glTranslated(1, -1, 0);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        glColor3f(1, 0, 0);
+//        sphere2.draw();
+//        glColor3f(1, 1, 1);
+//        glPopMatrix();
+//
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        glTranslated(0, -1, -1);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        glColor3f(1, 0, 0);
+//        sphere2.draw();
+//        glColor3f(1, 1, 1);
+//        glPopMatrix();
+//        /* Third triangle */
+//
+//    /* Fourth triangle */
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        glTranslated(-1, -1, 0);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        glColor3f(1, 0, 0);
+//        sphere2.draw();
+//        glColor3f(1, 1, 1);
+//        glPopMatrix();
+//
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        glTranslated(0, 1, 0);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        glColor3f(1, 0, 0);
+//        sphere2.draw();
+//        glColor3f(1, 1, 1);
+//        glPopMatrix();
+//
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        glTranslated(0, -1, -1);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        glColor3f(1, 0, 0);
+//        sphere2.draw();
+//        glColor3f(1, 1, 1);
+//        glPopMatrix();
+//        /* fourth triangle */
     
     /*NEXT TETRA*/
     
     
-    glTranslated(.5, .5, .5);
-    
-    /* First triangle */
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        glTranslated(0, 1, 0);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        glColor3f(1, 0, 0);
-        sphere2.draw();
-        glColor3f(1, 1, 1);
-        glPopMatrix();
-        
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        /* first cylinder segment */
-        glRotated(-63.71, 1, 0, 0);
-    //    glRotated(90, 1, 0, 0);
-        glTranslated(0, 0.449, -0.22);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        cylinder2.draw();
-        glPopMatrix();
-        /* first cylinder segment */
-        
-        /* second cylinder segment */
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        
-    //    glRotated(-31.85, 0, 0, 1);
-    //    glRotated(63.71, 1, 0, 0);
-    //    glRotated(31.85, 0, 1, 0);
-        //    glRotated(90, 1, 0, 0);
-        glTranslated(0, -1.0, 0);
-        glTranslated(0, 0, 0.11);
-        glRotated(45, 0, 1, 0);
-        glTranslated(0.78, 0, 0);
-        glTranslated(0, 0, -0.08);
-    //    glRotated(90, 1, 0, 0);
-    //    glTranslated(0.449, -0.35, 0);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        cylinder1.draw();
-        glPopMatrix();
-        /* second cylinder segment */
-        
-        /* third cylinder segment */
-        glPushMatrix();
-//            glRotatef(cameraAngleX, 1, 0, 0);
-//            glRotatef(cameraAngleY, 0, 1, 0);
-//            glRotatef(-90, 1, 0, 0);
-            
-            
-        //    glRotated(-31.85, 0, 0, 1);
-        //    glRotated(63.71, 1, 0, 0);
-        //    glRotated(31.85, 0, 1, 0);
-            //    glRotated(90, 1, 0, 0);
-            glTranslated(0, -1.0, 0);
-            glTranslated(0, 0, -0.11);
-            glRotated(-45, 0, 1, 0);
-            glTranslated(-0.635, 0, 0);
-            glTranslated(0, 0, 0.08);
-        //    glRotated(90, 1, 0, 0);
-        //    glTranslated(0.449, -0.35, 0);
-        //    glColor3f(1, 0, 0);
-        //    glBindTexture(GL_TEXTURE_2D, 0);
-            cylinder1.draw();
-            glPopMatrix();
-        /* third cylinder segment */
-        
-        /* fourth cylinder segment */
-        glPushMatrix();
-//            glRotatef(cameraAngleX, 1, 0, 0);
-//            glRotatef(cameraAngleY, 0, 1, 0);
-//            glRotatef(-90, 1, 0, 0);
-            
-            
-        //    glRotated(-31.85, 0, 0, 1);
-        //    glRotated(63.71, 1, 0, 0);
-        //    glRotated(31.85, 0, 1, 0);
-            //    glRotated(90, 1, 0, 0);
-            glTranslated(0, -1.0, 0);
-    //        glTranslated(0, 0, -0.11);
-            glRotated(90, 0, 1, 0);
-    //        glTranslated(-0.635, 0, 0);
-    //        glTranslated(0, 0, 0.08);
-        //    glRotated(90, 1, 0, 0);
-        //    glTranslated(0.449, -0.35, 0);
-        //    glColor3f(1, 0, 0);
-        //    glBindTexture(GL_TEXTURE_2D, 0);
-            cylinder3.draw();
-            glPopMatrix();
-        /* fourth cylinder segment */
-        
-        /* fifth cylinder segment */
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-                
-        glTranslated(0.50, 0, 0);
-        glTranslated(0, -0.01, 0);
-                
-        glRotated(27, 0, 0, 1);
-        glRotated(90, 1, 0, 0);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        cylinder2.draw();
-        glPopMatrix();
-        /* fifth cylinder segment */
-        
-        /* sixth cylinder segment */
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-                
-        glTranslated(-0.50, 0, 0);
-        glTranslated(0, -0.01, 0);
-                
-        glRotated(-27, 0, 0, 1);
-        glRotated(-90, 1, 0, 0);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        cylinder2.draw();
-        glPopMatrix();
-        /* sixth cylinder segment */
-        
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        glTranslated(-1, -1, 0);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        glColor3f(1, 0, 0);
-        sphere2.draw();
-        glColor3f(1, 1, 1);
-        glPopMatrix();
-        
-        glPushMatrix();
-//        glRotatef(cameraAngleX, 1, 0, 0);
-//        glRotatef(cameraAngleY, 0, 1, 0);
-//        glRotatef(-90, 1, 0, 0);
-        
-        glTranslated(1, -1, 0);
-    //    glColor3f(1, 0, 0);
-    //    glBindTexture(GL_TEXTURE_2D, 0);
-        glColor3f(1, 0, 0);
-        sphere2.draw();
-        glColor3f(1, 1, 1);
-        glPopMatrix();
-        /* first triangle */
-        
-        /* Second triangle */
-            glPushMatrix();
-//            glRotatef(cameraAngleX, 1, 0, 0);
-//            glRotatef(cameraAngleY, 0, 1, 0);
-//            glRotatef(-90, 1, 0, 0);
-            
-            glTranslated(-1, -1, 0);
-        //    glColor3f(1, 0, 0);
-        //    glBindTexture(GL_TEXTURE_2D, 0);
-            glColor3f(1, 0, 0);
-            sphere2.draw();
-            glColor3f(1, 1, 1);
-            glPopMatrix();
-            
-            glPushMatrix();
-//            glRotatef(cameraAngleX, 1, 0, 0);
-//            glRotatef(cameraAngleY, 0, 1, 0);
-//            glRotatef(-90, 1, 0, 0);
-            
-            glTranslated(0, 1, 0);
-        //    glColor3f(1, 0, 0);
-        //    glBindTexture(GL_TEXTURE_2D, 0);
-            glColor3f(1, 0, 0);
-            sphere2.draw();
-            glColor3f(1, 1, 1);
-            glPopMatrix();
-            
-            glPushMatrix();
-//            glRotatef(cameraAngleX, 1, 0, 0);
-//            glRotatef(cameraAngleY, 0, 1, 0);
-//            glRotatef(-90, 1, 0, 0);
-            
-            glTranslated(0, -1, -1);
-        //    glColor3f(1, 0, 0);
-        //    glBindTexture(GL_TEXTURE_2D, 0);
-            glColor3f(1, 0, 0);
-            sphere2.draw();
-            glColor3f(1, 1, 1);
-            glPopMatrix();
-            /* second triangle */
-        
-        /* Third triangle */
-            glPushMatrix();
-//            glRotatef(cameraAngleX, 1, 0, 0);
-//            glRotatef(cameraAngleY, 0, 1, 0);
-//            glRotatef(-90, 1, 0, 0);
-            
-            glTranslated(-1, -1, 0);
-        //    glColor3f(1, 0, 0);
-        //    glBindTexture(GL_TEXTURE_2D, 0);
-            glColor3f(1, 0, 0);
-            sphere2.draw();
-            glColor3f(1, 1, 1);
-            glPopMatrix();
-            
-            glPushMatrix();
-//            glRotatef(cameraAngleX, 1, 0, 0);
-//            glRotatef(cameraAngleY, 0, 1, 0);
-//            glRotatef(-90, 1, 0, 0);
-            
-            glTranslated(1, -1, 0);
-        //    glColor3f(1, 0, 0);
-        //    glBindTexture(GL_TEXTURE_2D, 0);
-            glColor3f(1, 0, 0);
-            sphere2.draw();
-            glColor3f(1, 1, 1);
-            glPopMatrix();
-            
-            glPushMatrix();
-//            glRotatef(cameraAngleX, 1, 0, 0);
-//            glRotatef(cameraAngleY, 0, 1, 0);
-//            glRotatef(-90, 1, 0, 0);
-            
-            glTranslated(0, -1, -1);
-        //    glColor3f(1, 0, 0);
-        //    glBindTexture(GL_TEXTURE_2D, 0);
-            glColor3f(1, 0, 0);
-            sphere2.draw();
-            glColor3f(1, 1, 1);
-            glPopMatrix();
-            /* Third triangle */
-        
-        /* Fourth triangle */
-            glPushMatrix();
-//            glRotatef(cameraAngleX, 1, 0, 0);
-//            glRotatef(cameraAngleY, 0, 1, 0);
-//            glRotatef(-90, 1, 0, 0);
-            
-            glTranslated(-1, -1, 0);
-        //    glColor3f(1, 0, 0);
-        //    glBindTexture(GL_TEXTURE_2D, 0);
-            glColor3f(1, 0, 0);
-            sphere2.draw();
-            glColor3f(1, 1, 1);
-            glPopMatrix();
-            
-            glPushMatrix();
-//            glRotatef(cameraAngleX, 1, 0, 0);
-//            glRotatef(cameraAngleY, 0, 1, 0);
-//            glRotatef(-90, 1, 0, 0);
-            
-            glTranslated(0, 1, 0);
-        //    glColor3f(1, 0, 0);
-        //    glBindTexture(GL_TEXTURE_2D, 0);
-            glColor3f(1, 0, 0);
-            sphere2.draw();
-            glColor3f(1, 1, 1);
-            glPopMatrix();
-            
-            glPushMatrix();
-//            glRotatef(cameraAngleX, 1, 0, 0);
-//            glRotatef(cameraAngleY, 0, 1, 0);
-//            glRotatef(-90, 1, 0, 0);
-            
-            glTranslated(0, -1, -1);
-        //    glColor3f(1, 0, 0);
-        //    glBindTexture(GL_TEXTURE_2D, 0);
-            glColor3f(1, 0, 0);
-            sphere2.draw();
-            glColor3f(1, 1, 1);
-            glPopMatrix();
-            /* fourth triangle */
+//    glTranslated(0,0, 0.10);
+//    glRotated(180, 0, 1, 0);
+//
+//    /* First triangle */
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        glTranslated(0, 1, 0);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        glColor3f(1, 0, 0);
+//        sphere2.draw();
+//        glColor3f(1, 1, 1);
+//        glPopMatrix();
+//
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        /* first cylinder segment */
+//        glRotated(-63.71, 1, 0, 0);
+//    //    glRotated(90, 1, 0, 0);
+//        glTranslated(0, 0.449, -0.22);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        cylinder2.draw();
+//        glPopMatrix();
+//        /* first cylinder segment */
+//
+//        /* second cylinder segment */
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//
+//    //    glRotated(-31.85, 0, 0, 1);
+//    //    glRotated(63.71, 1, 0, 0);
+//    //    glRotated(31.85, 0, 1, 0);
+//        //    glRotated(90, 1, 0, 0);
+//        glTranslated(0, -1.0, 0);
+//        glTranslated(0, 0, 0.11);
+//        glRotated(45, 0, 1, 0);
+//        glTranslated(0.78, 0, 0);
+//        glTranslated(0, 0, -0.08);
+//    //    glRotated(90, 1, 0, 0);
+//    //    glTranslated(0.449, -0.35, 0);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        cylinder1.draw();
+//        glPopMatrix();
+//        /* second cylinder segment */
+//
+//        /* third cylinder segment */
+//        glPushMatrix();
+////            glRotatef(cameraAngleX, 1, 0, 0);
+////            glRotatef(cameraAngleY, 0, 1, 0);
+////            glRotatef(-90, 1, 0, 0);
+//
+//
+//        //    glRotated(-31.85, 0, 0, 1);
+//        //    glRotated(63.71, 1, 0, 0);
+//        //    glRotated(31.85, 0, 1, 0);
+//            //    glRotated(90, 1, 0, 0);
+//            glTranslated(0, -1.0, 0);
+//            glTranslated(0, 0, -0.11);
+//            glRotated(-45, 0, 1, 0);
+//            glTranslated(-0.635, 0, 0);
+//            glTranslated(0, 0, 0.08);
+//        //    glRotated(90, 1, 0, 0);
+//        //    glTranslated(0.449, -0.35, 0);
+//        //    glColor3f(1, 0, 0);
+//        //    glBindTexture(GL_TEXTURE_2D, 0);
+//            cylinder1.draw();
+//            glPopMatrix();
+//        /* third cylinder segment */
+//
+//        /* fourth cylinder segment */
+//        glPushMatrix();
+////            glRotatef(cameraAngleX, 1, 0, 0);
+////            glRotatef(cameraAngleY, 0, 1, 0);
+////            glRotatef(-90, 1, 0, 0);
+//
+//
+//        //    glRotated(-31.85, 0, 0, 1);
+//        //    glRotated(63.71, 1, 0, 0);
+//        //    glRotated(31.85, 0, 1, 0);
+//            //    glRotated(90, 1, 0, 0);
+//            glTranslated(0, -1.0, 0);
+//    //        glTranslated(0, 0, -0.11);
+//            glRotated(90, 0, 1, 0);
+//    //        glTranslated(-0.635, 0, 0);
+//    //        glTranslated(0, 0, 0.08);
+//        //    glRotated(90, 1, 0, 0);
+//        //    glTranslated(0.449, -0.35, 0);
+//        //    glColor3f(1, 0, 0);
+//        //    glBindTexture(GL_TEXTURE_2D, 0);
+//            cylinder3.draw();
+//            glPopMatrix();
+//        /* fourth cylinder segment */
+//
+//        /* fifth cylinder segment */
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        glTranslated(0.50, 0, 0);
+//        glTranslated(0, -0.01, 0);
+//
+//        glRotated(27, 0, 0, 1);
+//        glRotated(90, 1, 0, 0);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        cylinder2.draw();
+//        glPopMatrix();
+//        /* fifth cylinder segment */
+//
+//        /* sixth cylinder segment */
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        glTranslated(-0.50, 0, 0);
+//        glTranslated(0, -0.01, 0);
+//
+//        glRotated(-27, 0, 0, 1);
+//        glRotated(-90, 1, 0, 0);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        cylinder2.draw();
+//        glPopMatrix();
+//        /* sixth cylinder segment */
+//
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        glTranslated(-1, -1, 0);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        glColor3f(1, 0, 0);
+//        sphere2.draw();
+//        glColor3f(1, 1, 1);
+//        glPopMatrix();
+//
+//        glPushMatrix();
+////        glRotatef(cameraAngleX, 1, 0, 0);
+////        glRotatef(cameraAngleY, 0, 1, 0);
+////        glRotatef(-90, 1, 0, 0);
+//
+//        glTranslated(1, -1, 0);
+//    //    glColor3f(1, 0, 0);
+//    //    glBindTexture(GL_TEXTURE_2D, 0);
+//        glColor3f(1, 0, 0);
+//        sphere2.draw();
+//        glColor3f(1, 1, 1);
+//        glPopMatrix();
+//        /* first triangle */
+//
+//        /* Second triangle */
+//            glPushMatrix();
+////            glRotatef(cameraAngleX, 1, 0, 0);
+////            glRotatef(cameraAngleY, 0, 1, 0);
+////            glRotatef(-90, 1, 0, 0);
+//
+//            glTranslated(-1, -1, 0);
+//        //    glColor3f(1, 0, 0);
+//        //    glBindTexture(GL_TEXTURE_2D, 0);
+//            glColor3f(1, 0, 0);
+//            sphere2.draw();
+//            glColor3f(1, 1, 1);
+//            glPopMatrix();
+//
+//            glPushMatrix();
+////            glRotatef(cameraAngleX, 1, 0, 0);
+////            glRotatef(cameraAngleY, 0, 1, 0);
+////            glRotatef(-90, 1, 0, 0);
+//
+//            glTranslated(0, 1, 0);
+//        //    glColor3f(1, 0, 0);
+//        //    glBindTexture(GL_TEXTURE_2D, 0);
+//            glColor3f(1, 0, 0);
+//            sphere2.draw();
+//            glColor3f(1, 1, 1);
+//            glPopMatrix();
+//
+//            glPushMatrix();
+////            glRotatef(cameraAngleX, 1, 0, 0);
+////            glRotatef(cameraAngleY, 0, 1, 0);
+////            glRotatef(-90, 1, 0, 0);
+//
+//            glTranslated(0, -1, -1);
+//        //    glColor3f(1, 0, 0);
+//        //    glBindTexture(GL_TEXTURE_2D, 0);
+//            glColor3f(1, 0, 0);
+//            sphere2.draw();
+//            glColor3f(1, 1, 1);
+//            glPopMatrix();
+//            /* second triangle */
+//
+//        /* Third triangle */
+//            glPushMatrix();
+////            glRotatef(cameraAngleX, 1, 0, 0);
+////            glRotatef(cameraAngleY, 0, 1, 0);
+////            glRotatef(-90, 1, 0, 0);
+//
+//            glTranslated(-1, -1, 0);
+//        //    glColor3f(1, 0, 0);
+//        //    glBindTexture(GL_TEXTURE_2D, 0);
+//            glColor3f(1, 0, 0);
+//            sphere2.draw();
+//            glColor3f(1, 1, 1);
+//            glPopMatrix();
+//
+//            glPushMatrix();
+////            glRotatef(cameraAngleX, 1, 0, 0);
+////            glRotatef(cameraAngleY, 0, 1, 0);
+////            glRotatef(-90, 1, 0, 0);
+//
+//            glTranslated(1, -1, 0);
+//        //    glColor3f(1, 0, 0);
+//        //    glBindTexture(GL_TEXTURE_2D, 0);
+//            glColor3f(1, 0, 0);
+//            sphere2.draw();
+//            glColor3f(1, 1, 1);
+//            glPopMatrix();
+//
+//            glPushMatrix();
+////            glRotatef(cameraAngleX, 1, 0, 0);
+////            glRotatef(cameraAngleY, 0, 1, 0);
+////            glRotatef(-90, 1, 0, 0);
+//
+//            glTranslated(0, -1, -1);
+//        //    glColor3f(1, 0, 0);
+//        //    glBindTexture(GL_TEXTURE_2D, 0);
+//            glColor3f(1, 0, 0);
+//            sphere2.draw();
+//            glColor3f(1, 1, 1);
+//            glPopMatrix();
+//            /* Third triangle */
+//
+//        /* Fourth triangle */
+//            glPushMatrix();
+////            glRotatef(cameraAngleX, 1, 0, 0);
+////            glRotatef(cameraAngleY, 0, 1, 0);
+////            glRotatef(-90, 1, 0, 0);
+//
+//            glTranslated(-1, -1, 0);
+//        //    glColor3f(1, 0, 0);
+//        //    glBindTexture(GL_TEXTURE_2D, 0);
+//            glColor3f(1, 0, 0);
+//            sphere2.draw();
+//            glColor3f(1, 1, 1);
+//            glPopMatrix();
+//
+//            glPushMatrix();
+////            glRotatef(cameraAngleX, 1, 0, 0);
+////            glRotatef(cameraAngleY, 0, 1, 0);
+////            glRotatef(-90, 1, 0, 0);
+//
+//            glTranslated(0, 1, 0);
+//        //    glColor3f(1, 0, 0);
+//        //    glBindTexture(GL_TEXTURE_2D, 0);
+//            glColor3f(1, 0, 0);
+//            sphere2.draw();
+//            glColor3f(1, 1, 1);
+//            glPopMatrix();
+//
+//            glPushMatrix();
+////            glRotatef(cameraAngleX, 1, 0, 0);
+////            glRotatef(cameraAngleY, 0, 1, 0);
+////            glRotatef(-90, 1, 0, 0);
+//
+//            glTranslated(0, -1, -1);
+//        //    glColor3f(1, 0, 0);
+//        //    glBindTexture(GL_TEXTURE_2D, 0);
+//            glColor3f(1, 0, 0);
+//            sphere2.draw();
+//            glColor3f(1, 1, 1);
+//            glPopMatrix();
+//            /* fourth triangle */
     
     /*NEXT TETRA*/
 
