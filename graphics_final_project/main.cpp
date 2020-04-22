@@ -604,9 +604,13 @@ void displayCB()
     glRotatef(cameraAngleY, 0, 1, 0);
     
     cylinder_between(0, 0, 0, 0, 1, 1, 0.067, .070);
+    cylinder_between(0, 1, 1, 0, 0, 1, 0.067, .070);
     cylinder_between(0, 0, 0, 0, 0, 1, 0.067, .070);
+    cylinder_between(0, 0, 1, 1, 0, 1, 0.067, .070);
     cylinder_between(0, 0, 0, 1, 0, 1, 0.067, .070);
+    cylinder_between(1, 0, 1, 1, 1, 1, 0.067, .070);
     cylinder_between(0, 0, 0, 1, 1, 1, 0.067, .070);
+    cylinder_between(0, 1, 1, 1, 1, 1, 0.067, .070);
     
     glPushMatrix();
     glColor3f(1, 0, 0);
@@ -641,6 +645,10 @@ void displayCB()
     sphere2.draw();
     glColor3f(1, 1, 1);
     glPopMatrix();
+    
+    
+    ////////////////////////
+    
     
 //    glPushMatrix();
 //    glColor3f(1, 0, 0);
